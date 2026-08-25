@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(213, 213, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+}
+
+.login-container {
+    background-color: rgb(246, 249, 252);
+    border-radius: 10px;
+    box-shadow: 2px 1px 3px 3px gray;
+}
