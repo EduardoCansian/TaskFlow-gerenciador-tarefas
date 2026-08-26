@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login-style.css">
     <title>Login - TaskFlow</title>
+    <link rel="icon" href="\LOGO\icon_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="\CSS\login-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <main>
         <div class="login-container">
-            <section>
-                <!-- <div class="logo">
-                    <img src="logo/TaskFlow_logo.png" alt="logo"> 
-                </div> -->
-                <h1>Bem-vindo de volta</h1>
-
+            <!-- <div class="login-content"> -->
+                <section>
+                    <form action="#" method="post" class="form-login">
+                        <div class="header-login">
+                    <img src="\LOGO\TaskFlow_logo.png" alt="logo" width="200"> 
+                    <h1>Bem-vindo de volta</h1>
+                </div>
+                
                 <div class="input-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="seu@email.com">
+                    <input type="email" id="email" placeholder="seu@email.com" required>
                 </div>
 
                 <div class="input-group">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" placeholder="****">
-                    <a href="">Esqueceu a senha?</a>
+                    <input type="password" id="password" placeholder="****" required>
+                    <a href="" id="forgot-password">Esqueceu a senha?</a>
                 </div>
+                 
 
                 <button type="submit">Entrar</button>
 
@@ -32,7 +40,10 @@
                     <p>Não tem uma conta?</p>
                     <a href="">Cadastre-se aqui</a>
                 </div>
-            </section>
+
+                    </form>
+                </section>
+            <!-- </div> -->
         </div>
     </main>
 </body>

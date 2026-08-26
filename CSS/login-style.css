@@ -4,11 +4,125 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
 }
 
 .login-container {
+    width: 500px;
+    height: 400px;
     background-color: rgb(246, 249, 252);
     border-radius: 10px;
-    box-shadow: 2px 1px 3px 3px gray;
+    box-shadow: 0.5px 2px 8px 2px gray;
+    padding: 20px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .login-content {
+    max-width: 380px;      
+    margin: 0 auto;        
+} */
+
+.form-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: 4px;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input {
+    width: 290px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+p {
+    font-size: 13px;
+}
+
+a {
+    font-size: 13px;
+    color:blue;
+}
+
+a:hover {
+    color:blueviolet
+}
+
+#forgot-password {
+    align-self: flex-end;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(59, 59, 255);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    border: 0;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+button:hover {
+    background-color:rgb(1, 1, 152);
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
 }
