@@ -14,24 +14,19 @@ body {
     height: 400px;
     background-color: rgb(246, 249, 252);
     border-radius: 10px;
-    box-shadow: 0.5px 2px 8px 2px gray;
+    box-shadow: 0.5px 2px 8px 1px rgb(178, 167, 255);
     padding: 20px;
     border: 1px solid gray;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top: 2px solid blue;
+    border-top-width: 3px;
 }
-
-/* .login-content {
-    max-width: 380px;      
-    margin: 0 auto;        
-} */
 
 .form-login {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -57,30 +52,51 @@ h1 {
 .input-group {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 3px;
 }
 
 label {
     align-self: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 label:hover {
     cursor: pointer;
 }
 
-input {
-    width: 290px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 7px;
-}
-
 input:focus {
     border: 2px solid blue;
+}
+
+input::placeholder {
+    color: rgb(135, 135, 135);
+    font-style: italic;
+}
+
+.input-group:focus-within {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.03);
+    border-color: blue;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: rgb(93, 93, 93);
+}
+
+.input-group i {
+    margin-right: 6px;
+    color: rgb(147,147,147);
+    font-size: 1.2rem;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
 p {
@@ -90,6 +106,7 @@ p {
 a {
     font-size: 13px;
     color:blue;
+    text-decoration: none;
 }
 
 a:hover {
@@ -98,8 +115,13 @@ a:hover {
 
 #forgot-password {
     align-self: flex-end;
-    margin-top: 5px;
-    margin-bottom: 10px;
+}
+
+.line-div {
+    background-color: gray;
+    margin-top: 10px;
+    height: 1px;
+    color: white;
 }
 
 button {
@@ -109,20 +131,26 @@ button {
     color: white;
     font-family: 'Inter', sans-serif;
     border: 0;
-    border-radius: 7px;
+    border-radius: 12px;
     font-size: 17px;
+    align-self: center;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color:rgb(1, 1, 152);
     transform: scale(1.1);
-    transition: 0.1s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
+}
+
+.bi-arrow-right {
+    font-size: 20px;
+    margin-top: 13px;
 }
 
 .footer-text {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 5px;
 }
