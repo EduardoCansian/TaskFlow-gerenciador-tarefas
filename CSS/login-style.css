@@ -6,21 +6,18 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(213, 213, 247), rgb(221, 198, 251));
 }
 
 .login-container {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-width: 560px;
     background-color: rgb(246, 249, 252);
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0.5px 2px 8px 1px rgb(178, 167, 255);
-    padding: 20px;
+    padding: 45px 50px;
     border: 1px solid gray;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-top: 2px solid blue;
     border-top-width: 3px;
 }
@@ -46,17 +43,19 @@ img {
 h1 {
     font-weight: 600;
     color: #000000;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .input-group {
     display: flex;
     align-items: center;
-    width: auto;
+    width: 290px;
     margin-bottom: 5px;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 3px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
 }
 
 label {
@@ -78,7 +77,6 @@ input::placeholder {
 }
 
 .input-group:focus-within {
-    transition: transform 0.2s ease-in-out;
     transform: scale(1.03);
     border-color: blue;
 }
@@ -89,13 +87,13 @@ input::placeholder {
     outline: none;
     width: 100%;
     color: rgb(93, 93, 93);
+    font-size: 14px;
 }
 
-.input-group i {
+.material-symbols-outlined {
     margin-right: 6px;
-    color: rgb(147,147,147);
+    color: rgb(116, 116, 116);
     font-size: 1.2rem;
-    font-size: 20px;
     margin-left: 5px;
 }
 
@@ -119,13 +117,12 @@ a:hover {
 
 .line-div {
     background-color: gray;
-    margin-top: 10px;
+    margin-top: 30px;
     height: 1px;
-    color: white;
 }
 
 button {
-    width: 200px;
+    width: 100%;
     padding: 10px;
     background-color: rgb(59, 59, 255);
     color: white;
@@ -133,8 +130,13 @@ button {
     border: 0;
     border-radius: 12px;
     font-size: 17px;
+    font-weight: 500;
     align-self: center;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 button:hover {
@@ -146,11 +148,11 @@ button:hover {
 
 .bi-arrow-right {
     font-size: 20px;
-    margin-top: 13px;
 }
 
 .footer-text {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 5px;
 }
