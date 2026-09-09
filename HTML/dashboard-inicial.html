@@ -14,10 +14,10 @@
         <div class="main-container">
             <aside class="sidebar">
                 <img src="/LOGO/TaskFlow2_logo.png" alt="logo" width="180">
-                <button class="btn-sidebar active"><span class="material-symbols-outlined">task_alt</span>Tarefas</button>
-                <button class="btn-sidebar"><span class="material-symbols-outlined">calendar_month</span>Calendário</button>
-                <button class="btn-sidebar"><span class="material-symbols-outlined">folder</span>Projetos</button>
-                <button class="btn-sidebar"><span class="material-symbols-outlined">settings</span>Configurações</button>
+                <button class="btn-sidebar active"><span class="material-symbols-outlined" style="font-size: 30px;">task_alt</span>Tarefas</button>
+                <button class="btn-sidebar"><span class="material-symbols-outlined" style="font-size: 30px;">calendar_month</span>Calendário</button>
+                <button class="btn-sidebar"><span class="material-symbols-outlined" style="font-size: 30px;">folder</span>Projetos</button>
+                <button class="btn-sidebar"><span class="material-symbols-outlined" style="font-size: 30px;">settings</span>Configurações</button>
 
                 <div class="footer-sidebar">
                     <div class="line-div"></div>
@@ -34,13 +34,43 @@
                 </div>
                 <div class="task-content">
                     <div class="container-add-task">
-                        <span class="material-symbols-outlined">assignment_add</span>
-                        <input type="text" placeholder="Nomear nova tarefa...">
-                        <button class="btn-add-task"><span class="material-symbols-outlined">add_2</span>Adicionar Tarefa</button>
+                        <span class="material-symbols-outlined" style="font-size: 30px;">assignment_add</span>
+                        <input id="task-input" type="text" placeholder="Nomear nova tarefa...">
+                        <button class="btn-add-task" id="btnaddtask"><span class="material-symbols-outlined">add_2</span>Adicionar Tarefa</button>
+                    </div>
+                    <div class="container-tasks">
+                        <div id="task-pending" class="container">
+                            <div class="header-task">TAREFAS PENDENTES</div>
+                        </div>
+                        <div class="container">
+                            <div class="header-task">CONCLUÍDAS</div>
+                            <div class="tasklist">
+                                <div class="checklist">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="info-task">
+                                    <div class="task-body">
+                                        <p class="title-task">Título da tarefa concluída</p>
+                                        <p class="desc-task">Descrição da tarefa concluída</p>
+                                        <p class="label-task">Etiquetas da tarefa concluída</p>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn-actions-menu"><span class="material-symbols-outlined">more_horiz</span></button>
+                                        <div class="dropdown-menu">
+                                            <button class="btn-dropdown-menu"><span class="material-symbols-outlined">delete</span>Excluir</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div id="toast" class="toast-hidden">Tarefa adicionada com sucesso!</div>
         </div>
     </main>
+    <script src="/JS/dashboard-inicial.js"></script>
 </body>
 </html>

@@ -1,23 +1,24 @@
 body {
-    
+    margin: 0;
     min-height: 90vh;
     font-family: 'Inter', sans-serif;
+    background-color: rgb(213, 213, 247);
 }
 
 .main-container {
     display: flex;
     background-color: rgb(213, 213, 247);
     flex-direction: row;
-    height: 100%;
-    max-height: 900px;
+    min-height: 100vh;
     width: 100%;
     max-width: 2000px;
+    margin: 0 auto;
 }
 
 /* Barra lateral (esquerda da página) */
  .sidebar { 
     padding: 20px;
-    background-color: azure;
+    background-color: whitesmoke;
     width: 260px;
     flex-shrink: 0;
     display: flex;
@@ -30,9 +31,13 @@ body {
 button {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-radius: 5px;
     border: none;
+    gap: 10px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* Botões da barra lateral */
@@ -42,7 +47,8 @@ button {
     justify-content: flex-start;
     padding: 10px 12px;
     transition: all 0.2s ease-in-out;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .btn-sidebar.active {
@@ -58,14 +64,9 @@ button {
 
 /* Animação dos botões */
 .btn-sidebar:hover {
-    cursor: pointer;
     padding-left: 18px;
     transition: 0.3s ease-in-out;
     background-color: rgb(201, 201, 255);
-}
-
-.material-symbols-outlined {
-    margin-right: 5px;
 }
 
 .footer-sidebar {
@@ -107,14 +108,9 @@ p {
 
 .task-content {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 3em 2em;
-}
-
-.container-add-task input {
-    background: transparent;
-    border: none;
 }
 
 .container-add-task {
@@ -126,6 +122,8 @@ p {
     border-radius: 5px;
     padding: 8px 8px 8px 15px;
     transition: all 0.3s ease;
+    border: 1px solid rgb(192, 192, 192);
+    box-shadow: 0px 1px 4px 0.1px gray;
 }
 
 input:focus {
@@ -134,7 +132,10 @@ input:focus {
 
 input {
     width: 100%;
-    font-size: 15px;
+    font-size: 17px;
+    padding-left: 5px;
+    background: transparent;
+    border: none;
 }
 
 /* Pequena animação ao receber foco */
@@ -149,12 +150,142 @@ input {
     color: white;
     margin-left: 15px;
     font-weight: 500;
-    width: 210px;
+    width: 217px;
     padding: 8px;
+    font-size: 15px;
 }
 
 .btn-add-task:hover {
     background-color: rgb(91, 91, 252);
     transform: none;
+}
+
+/* ------ Parte inferior onde ficam as tarefas */
+
+.container-tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.container {
+    border: 1px solid gray;
+    margin-top: 5px;
+    border-radius: 15px;
+    display: none;
+    overflow: hidden;
+}
+
+.header-task {
+    background-color: rgb(220, 220, 220);
+    padding: 10px;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+.tasklist {
+    display: flex;
+    border-top: 1px solid gray;
+    /* border-radius: 0px 0px 15px 15px; */
+    background-color: whitesmoke;
+    width: 100%;
+
+}
+
+input[type="checkbox"] {
+    height: 20px;
+}
+
+input[type="checkbox"]:hover {
     cursor: pointer;
 }
+
+.checklist {
+    padding: 15px;
+}
+
+.info-task {
+    margin-left: 10px;
+    width: 100%;
+    display: flex;
+}
+
+.task-body {
+    width: 100%;
+}
+
+.title-task {
+    font-size: 20px;
+}
+
+#desc-task {
+
+    color: gray;
+}
+
+.btn-actions-menu {
+    background: transparent;
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.btn-actions-menu:hover {
+    background-color: rgba(183, 192, 244, 0.158);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px grey;
+    width: 170px;
+    z-index: 10;
+}
+
+.btn-dropdown-menu {
+    background: transparent;
+    margin: 1px;
+    width: 100%;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+}
+
+.btn-dropdown-menu:hover {
+    background: rgb(205, 205, 205);
+}
+
+.active {
+    background-color: rgb(205, 205, 205);
+}
+
+.show {
+    display: block;
+}
+
+.toast-hidden {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    background-color: rgba(10, 111, 10, 0.836);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.toast-hidden.show {
+    opacity: 1;
+}
+
+.toast-hidden.hidden {
+    opacity: 0;
+}
+
